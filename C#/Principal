@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Threading;
+
+class Principal
+{
+    static void Main()
+    {
+        List<int> lista1 = new List<int>();
+        List<int> lista2 = new List<int>();
+        List<int> lista3 = new List<int>();
+
+        Thread t1 = new Thread(() => Numeros.PopularAleatorio(lista1, 1000000, "lista1"));
+        Thread t2 = new Thread(() => Numeros.PopularAleatorio(lista2, 1000000, "lista2"));
+        Thread t3 = new Thread(() => Numeros.PopularAleatorio(lista3, 1000000, "lista3"));
+
+        t1.Start();
+        t2.Start();
+        t3.Start();
+
+        t1.Join();
+        t2.Join();
+        t3.Join();
+
+        Numeros.Exibir(lista1, "lista1");
+        Numeros.Exibir(lista2, "lista2");
+        Numeros.Exibir(lista3, "lista3");
+
+        Console.WriteLine("Programa encerrado!!!");
+    }
+}
