@@ -1,0 +1,6 @@
+Tarefa 3 - Pesquisa com implementação dos conceitos: Relógios Físicos e Lógicos. Exclusão Mútua e Eleição (não avaliada)
+Pesquisa de forma livre os conceitos acima, apresentando exemplos em no mínimo duas linguagens.
+
+Relógio físico: é a forma que o sistema encontra de sincronizar todas as máquinas em um único "fuso", de forma que elas funcionem em sincronia de maneira mais ordenada, facilitando com isso coisas como transações bancárias, por exemplo. Existem alguns protocolos usados 
+para sincronizar elas, o mais conhecido é o Network Time Protocol (NTP), que ajusta o relógio de cada máquina usando algo como referência global, como, por exemplo, sua posição geográfica naquele instante. Contudo, existem alguns desafios a serem superados durante essa
+sincronização, dentre eles, o atrazo (um exemplo disso é que, quando a mensagem demora para ser enviada, ela pode ser recebida como resposta a uma segunda pergunta já enviada pelo outro usuário); os drifts ()
